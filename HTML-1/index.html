@@ -4,19 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    /* Estilo aplicado somente à tabela com class="styled" */
+    table.styled {
+      width: 60%;
+      border-collapse: collapse;
+    }
+
+    table.styled th, table.styled td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+
+    table.styled thead {
+      background-color: #f2f2f2;
+    }
+
+    table.styled tfoot {
+      background-color: #ddd;
+      font-weight: bold;
+    }
+
+    table.styled colgroup col:first-child {
+      background-color: #eef;
+    }
+  </style>
 </head>
 <body>
-    <p>Sou um programador que não precisa de café</p>
-    <span>isso é im span</span><br>
-    <b>negrito</b><br>
-    <hr>
-    <strong>isso é strong</strong><br>
-    <i>italico</i><br>
-    <pai>
-        <filho>Filho está em pai</filho>
-    </pai>
-    <br>
-
+    <h2>Basic Stuff</h2>
+        <p>Sou um programador que não precisa de café</p>
+        <span>isso é im span</span><br>
+        <b>negrito</b><br>
+        <strong>isso é strong</strong><br>
+        <i>italico</i><br>
+        <pai>
+            <filho>Filho está em pai</filho>
+        </pai>
+        <hr>
+    <h2>Images, Audio and Iframes</h2>
     <p>Capa Halo 4</p>
     <img src="https://cdn.mos.cms.futurecdn.net/GfzwEBy5XYUZnfV5tkZ7dH-970-80.jpg.webp" alt="Capa do Halo 4" width="320">
     <br>
@@ -34,6 +60,87 @@
     <br>
 
     <p>FS22 video using Iframe</p>
-    <iframe src="https://www.youtube.com/embed/Wl1wvY7TVuc" style="width: 100%; height: 1080px;"></iframe>
+    <iframe src="https://www.youtube.com/embed/Wl1wvY7TVuc" style="width: 50%"></iframe>
+    <hr>
+
+    <h2>Canvas</h2>
+    <canvas id="jogo" width="400" height="250">
+        Opa, ocorreu um erro
+    </canvas>
+    <hr>
+
+    <h2>Div</h2>
+    <div>Inside a div</div>
+    <hr>
+
+    <h2>Links</h2>
+    <a href="https://www.python.org/">Python</a>
+    <hr>
+
+    <!--comment -->
+
+    <h2>Tables</h2>
+    <h3>Simple Table</h3>
+    <table>
+        <tr>
+            <th>Dia da Semana</th>
+            <th>Hora</th>
+        </tr>
+        <tr>
+            <td>Segunda</td>
+            <td>14:00</td>
+        </tr>
+        <tr>
+            <td>Terça</td>
+            <th>15:00</th>
+        </tr>
+    </table>
+    
+    <h3>A more robust one</h3>
+
+    <table class="styled">
+        <!-- Table Caption -->
+        <caption>
+            Sales by Quarter
+        </caption>
+
+        <!-- Colum Group for Styling-->
+        <colgroup>
+            <col>
+            <col span=2>
+        </colgroup>
+
+        <thead>
+            <th>Quarter</th>
+            <th>Product A</th>
+            <th>Product B</th>
+        </thead>
+        <!-- Table Body -->
+        <tbody>
+            <tr>
+                <td>1º</td>
+                <td>120</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>2º</td>
+                <td>150</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>3º</td>
+                <td>180</td>
+                <td>95</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>450</td>
+                    <td>265</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+
 </body>
 </html>
