@@ -67,9 +67,18 @@
     <!-- ----------------------------------------- Canvas ----------------------------------------- -->
 
     <h2>Canvas</h2>
-    <canvas id="jogo" width="400" height="250">
-        Opa, ocorreu um erro
+    <canvas id="game" width="400" height="150">
+        Your browser don't suport canvas
     </canvas>
+
+    <script>
+        const canvas = document.getElementById("game");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "skyblue";
+        ctx.fillRect(50, 40, 200, 70)
+    </script>
+
     <hr>
 
     <!-- ----------------------------------------- Div ----------------------------------------- -->
@@ -165,5 +174,10 @@
         <li>Banana</li>
         <li>Orange</li>
     </ul>
+    <hr>
+
+    <h2>Form</h2>
+    <a href="personal_info_form.html">Personal Info Form</a>
+    <hr>
 </body>
 </html>

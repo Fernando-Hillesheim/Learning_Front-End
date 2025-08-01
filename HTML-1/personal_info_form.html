@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info Form</title>
+</head>
+<body>
+    <h2>User Resistration</h2>
+
+    <form action="thank_you.html" method="get">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email"><br>
+
+            <label for="name">Password:</label>
+            <input type="password" name="password" id="password">
+
+            <label for="birthdate">Date of birthdate</label>
+            <input type="date" name="birthdate" id="birthdate">
+
+            <label for="favoritecolor">Favorite Color</label>
+            <input type="color" name="favoritecolor" id="favoritecolor">
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="search">Favorite Search Terms</label>
+            <input type="search" name="search" id="search"><br>
+
+            <label for="file">Upload a File</label>
+            <input type="file" name="file" id="file"><br>
+
+            <label for="want_emails">I want to receive updates by email</label>
+            <input type="checkbox" name="newsletter" id="newsletter"><br>
+
+            <label>
+                <input type="checkbox" name="terms">
+                I agree to the terms of service
+            </label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Actions</legend>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" onclick="alert('This is a custom button!')">Custon Button</button>
+        </fieldset>
+    </form>
+</body>
+</html>
