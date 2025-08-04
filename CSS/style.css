@@ -1,0 +1,51 @@
+/* variables */
+:root {
+    --color_1: green;
+}
+
+*{
+    font-family: 'Playwrite AU QLD', coursive;
+    /* removing defaut configuration */
+    padding: 0;
+    margin: 0;
+
+    /* keep the container with the same size after padding */
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* Sets the base font size to 10px (62.5% of the default 16px),
+    making it easier to use rem units for sizing — now 1rem ≈ 10px */
+}
+
+h1 {
+    color: #00f;
+    font-size: 26px;
+}
+p {
+    color: var(--color_1);
+    font-size: 1.6rem; /* 1rem ≃ 16px -> after html font-size:62.5% = 10px */
+}
+
+/* class */
+.p1 {
+    color: #00f;
+}
+.p2 {
+    color: #ff0000;
+}
+.p3 {
+    color: blueviolet;
+}
+
+div + p {
+    color: aqua;
+}
+
+p.mara {
+    color: yellowgreen;
+}
+
+div > p {
+    color: teal;
+}
