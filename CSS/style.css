@@ -49,3 +49,17 @@ p.mara {
 div > p {
     color: teal;
 }
+
+.fatherElement {
+    position: relative;
+    background-color: aqua;
+    width: 20rem;
+    height: 10rem;
+}
+
+.childElement {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ff0000;
+}
