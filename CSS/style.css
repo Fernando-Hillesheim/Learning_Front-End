@@ -1,13 +1,15 @@
 /* variables */
 :root {
     --color_1: green;
+    --father-container-bg-color: rgb(102, 197, 115);
+    --child-container-bg-color: tomato;
 }
 
 *{
     font-family: 'Playwrite AU QLD', coursive;
     /* removing defaut configuration */
     padding: 0;
-    margin: 0;
+    margin: 0.2rem;
 
     /* keep the container with the same size after padding */
     box-sizing: border-box;
@@ -62,4 +64,59 @@ div > p {
     bottom: 0;
     right: 0;
     background-color: #ff0000;
+}
+
+.fatherContainer_1{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.fatherContainer_2{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.fatherContainer_3{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.fatherContainer_4{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.fatherContainer_5{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.fatherContainer_6{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--father-container-bg-color);
+    width: 60rem;
+    height: 30rem;
+}
+
+.childContainer {
+    background-color: var(--child-container-bg-color);
+    width: 10rem;
+    height: 5rem;
+    margin: 10px 5px;
 }
