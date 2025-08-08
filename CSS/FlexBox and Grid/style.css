@@ -18,8 +18,6 @@ header {
 }
 a {
     text-decoration: none;
-    color: white;
-    font-size: 2rem;
 }
 
 header > a {
@@ -33,6 +31,7 @@ header > a > img {
 
 header > nav > ul{
     display: flex;
+    list-style: none;
 }
 
 header > nav > ul > li {
@@ -42,6 +41,8 @@ header > nav > ul > li {
 .nav-bar > li > a {
     display: block;
     padding: 1rem;
+    color: white;
+    font-size: 2rem;
 }
 
 .nav-bar > li > a:hover{
@@ -50,4 +51,29 @@ header > nav > ul > li {
 
 /* -------------------------------------- Section ------------------------------------------------------------- */
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: lightgrey;
+}
 
+.flex > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20rem;
+    background-color: burlywood;
+    margin: 1rem;
+}
+
+.flex > div > a {
+    color: black;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.flex > div > img {
+    width: 100%;
+    height: 85%;
+}
