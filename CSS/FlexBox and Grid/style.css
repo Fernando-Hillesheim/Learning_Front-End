@@ -49,7 +49,7 @@ header > nav > ul > li {
     background-color: gray;
 }
 
-/* -------------------------------------- Section ------------------------------------------------------------- */
+/* -------------------------------------- Section Flex Box ------------------------------------------------------------- */
 
 .flex {
     display: flex;
@@ -65,15 +65,23 @@ header > nav > ul > li {
     flex: 1 1 20rem;
     background-color: burlywood;
     margin: 1rem;
+    font-size: 2rem;
 }
 
 .flex > div > a {
     color: black;
     text-align: center;
-    padding: 0.8rem;
+    padding: 1rem;
+}
+
+.flex > div > a:hover {
+    background-color: darkorange;
+    color: white;
 }
 
 .flex > div > img {
     width: 100%;
     height: 85%;
 }
+
+/* -------------------------------------- Section Grid 1 ------------------------------------------------------------- */
