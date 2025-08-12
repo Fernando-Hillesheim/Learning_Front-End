@@ -2,10 +2,15 @@ html {
     font-size: 62.5%;
 }
 
-body, p {
+body, p, h2 {
     margin: 0;
     padding: 0;
     font-family: Arial;
+}
+
+img{
+    width: 100%;
+    display: block;
 }
 
 /* -------------------------------------- Header ------------------------------------------------------------- */
@@ -146,5 +151,40 @@ header > nav > ul > li {
 
     .grid1 >div.advertisement > p {
         font-size: 1.5rem;
+    }
+}
+
+/* -------------------------------------- Section Grid 2 ------------------------------------------------------------- */
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: 128rem;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid2 > aside > div {
+    margin-bottom: 1rem;
+}
+
+aside > div > p {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 60rem) {
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    aside > div {
+        flex: 1 1 20rem;
     }
 }
