@@ -1,0 +1,28 @@
+@use 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 62,5%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+body {
+    background: variables.$bg-color;
+    color: variables.$text-color;
+    a {
+        color: variables.$text-color;
+        text-decoration: none;
+        transition: .4s;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
