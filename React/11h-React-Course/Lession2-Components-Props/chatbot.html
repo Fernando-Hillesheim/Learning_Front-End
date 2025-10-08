@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+</head>
+<body>
+     <div class="js-container"></div>
+
+    <!-- The react version that will be used through the course -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- Translade JSX to JS -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <!-- To use babel we need to specify the type in the scrip element -->
+    <script type="text/babel">
+        function ChatInput() {
+            return (
+                <>
+                    <input type="text" placeholder="Send a message to Chatbot" size="30"></input>
+                    <button>Send</button>
+                </>
+            );
+        }
+
+        function ChatMessage({message, sender}) {
+            // const message = props.message;
+            // const sender = props.sender;
+            // const {message, sender} = props;
+
+            // let messageBox;
+            // switch(sender) {
+            //     case "user":
+            //         messageBox = (
+            //             <div>
+            //                <span>{message}</span>
+            //                 <img src="https://supersimple.dev/projects/chatbot/user.png" alt="" width="50"/>     
+            //             </div>
+            //         );
+            //         break;
+            //     case "robot":
+            //         messageBox = (
+            //             <div>
+            //                 <img src="https://supersimple.dev/projects/chatbot/robot.png" alt="" width="50"/>     
+            //                 <span>{message}</span>
+            //             </div>
+            //         );
+            //         break;
+            //     default:
+            //         break;
+                    
+            // }
+            // return messageBox;
+
+            return (
+                <div>
+                    {sender == 'robot' && <img src="https://supersimple.dev/projects/chatbot/robot.png" alt="" width="50"/>}
+                    <span>{message}</span>
+                    {sender == 'user' && <img src="https://supersimple.dev/projects/chatbot/user.png" alt="" width="50"/>}    
+                </div>
+            )
+        }
+
+        function App() {
+            return  (
+                <>
+                <ChatInput/>
+                <ChatMessage 
+                    message="Hello Chat" 
+                    sender="user"
+                />
+                <ChatMessage message="Hello! How can I help you?" sender="robot"/>
+                </>
+            ); 
+        }
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+    </script>
+</body>
+</html>

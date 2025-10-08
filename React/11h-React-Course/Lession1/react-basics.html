@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basics</title>
+</head>
+<body>
+    <div class="js-container"></div>
+    <!-- An exemple of external library import -->
+    <script src="https://unpkg.com/supersimpledev/external-library.js"></script>
+
+
+    <!-- The react version that will be used through the course -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- Translade JSX to JS -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <!-- To use babel we need to specify the type in the scrip element -->
+    <script type="text/babel">
+        const button = <button>hello</button>;
+
+        const container = document.querySelector('.js-container');
+        // ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+        // ReactDOM.createRoot(container).render(button); //this way we can only render one element at a time
+        //to create multiple we need to place then inside a div (father element)
+        const div = (
+            <div>
+                <p>Welcome to SuperSimpleDev {3+5-1} React Course</p>
+                <button>hello</button>
+                <p>another paragrath</p>
+            </div>
+        ); 
+        ReactDOM.createRoot(container).render(div);
+    </script>
+    
+</body>
+</html>
