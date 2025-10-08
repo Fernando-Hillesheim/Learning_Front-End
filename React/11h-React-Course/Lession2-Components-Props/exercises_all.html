@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lession 2 - Exercises</title>
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <!-- The react version that will be used through the course -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- Translade JSX to JS -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <!-- To use babel we need to specify the type in the scrip element -->
+    <script type="text/babel">
+
+        function Ex2a() {
+            return <p>Hello, welcome to my website</p>;
+        }
+
+        function Ex2b() {
+            return (
+                <div>
+                    <button>Login</button>
+                    <button>Sign Up</button>
+                </div>
+            );
+        }
+
+        function Ex2c() {
+            return (
+                <>
+                    <input 
+                        type="email" 
+                        placeholder="Email" 
+                        style={{display: "block"}}
+                    />
+                    <input 
+                        type="password" 
+                        placeholder="Password" 
+                        style={{display: "block"}}
+                    />
+                </>
+            );
+        }
+
+        function Ex2d_LoginForm() {
+            return (
+                <>
+                    <Ex2a/>
+                    <Ex2c/>
+                    <Ex2b/>
+                </>
+            );
+        }
+
+        //exercise 2e
+        function ProductCard({name, price, discoutPrice, imgSrc}) {
+            price = Number(price);
+            discoutPrice = Number(discoutPrice);
+            console.log(discoutPrice);
+            // let priceText;
+            // if(discoutPrice) {
+            //     discoutPrice = Number(discoutPrice);
+            //     priceText = <del><p>Price: ${price.toFixed(2)}</p></del>
+            // } else {
+            //     priceText = <p>Price: ${price.toFixed(2)}</p>
+            // }
+            return (
+                <div>
+                    <img src={imgSrc} width="50" />
+                    <p>{name}</p>
+                    {!Number.isNaN(discoutPrice) ?
+                        <del><p>Price: ${price.toFixed(2)}</p></del> : 
+                        <p>Price: ${price.toFixed(2)}</p>
+                    }
+                    {!Number.isNaN(discoutPrice) && <p>Discount: ${discoutPrice}</p>}
+                    <button>Add to cart</button>
+                </div>
+            );
+        }
+
+        function App() {
+            return(
+                <>
+                    <Ex2d_LoginForm/>
+                    <ProductCard 
+                        name="Cotton Socks" 
+                        price="10.90"
+                        discoutPrice="5.45"
+                        imgSrc="https://supersimple.dev/images/cotton-socks.png"
+                    />
+                    <p>----------</p>
+                    <ProductCard 
+                        name="Tennis Balls" 
+                        price="6"
+                        imgSrc="https://supersimple.dev/images/tennis-balls.png"
+                    />
+                    <ProductCard 
+                        name="Plain T-Shirt" 
+                        price="7.99"
+                        imgSrc="https://supersimple.dev/images/plain-t-shirt.png"
+                    />
+                </>
+            );
+        }
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+
+    </script>
+</body>
+</html>
