@@ -1,0 +1,38 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.6rem; 
+}
+
+$switch-colors: (
+  on: rgb(25,135,84),
+  off: red,
+  warning: orange
+);
+
+%switch-button-base {
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    display: block;
+    margin: 1rem 1rem 1rem auto;
+}
+
+.switch-button-on {
+    @extend %switch-button-base;
+    background: map-get($map: $switch-colors, $key: on);
+}
+
+.switch-button-off {
+    @extend %switch-button-base;
+    background: map-get($map: $switch-colors, $key: off)
+}

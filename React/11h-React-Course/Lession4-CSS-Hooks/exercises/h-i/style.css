@@ -1,0 +1,26 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dedede;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.counter-container > button {
+  background-color: #198754;
+  color: white;
+  padding: 2rem;
+  border: none;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=style.css.map */

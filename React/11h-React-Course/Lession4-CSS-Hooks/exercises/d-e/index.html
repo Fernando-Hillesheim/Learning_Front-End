@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        function Login() {
+            const [showPassword, setShowPassword] = React.useState(false);
+
+            return(
+                <div className="login-container">
+                    <h2>Welcome to my website</h2>
+                    <div className="login-container-inputs">
+                        <input 
+                            type="email" 
+                            placeholder="Email"
+                        />
+                        <div className="password-container">
+                            <input 
+                            type={showPassword === false 
+                                ? "password" 
+                                : "text"
+                            }
+                            placeholder="Password"
+                            />
+                            <button
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                            @
+                            </button>    
+                        </div>
+                    </div>
+                    <div className="login-container-buttons">
+                        <button>Login</button>
+                        <button>Sign up</button>
+                    </div>
+                </div>
+            )
+        }
+
+        function App() {
+            return(
+                <div className="app-container">
+                    <Login/>
+                </div>
+            )
+        }
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+    </script>
+</body>
+</html>

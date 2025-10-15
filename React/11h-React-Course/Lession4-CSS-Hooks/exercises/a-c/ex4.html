@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        function SwitchButton() {
+            const [isButtonOn, setIsButtonOn] = React.useState("ON");
+            return(
+                <>
+                    <button
+                    className={
+                        isButtonOn === "ON"
+                        ? "switch-button-on"
+                        : "switch-button-off"
+                    }
+                    onClick={() => {
+                        isButtonOn === "ON" 
+                        ? setIsButtonOn("OFF") 
+                        : setIsButtonOn("ON");
+                    }}
+                    >{isButtonOn}</button>
+                </>
+            )
+        }
+
+        function App() {
+            return(
+                <>
+                    <SwitchButton/>
+                </>
+            )
+        }
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+    </script>
+</body>
+</html>

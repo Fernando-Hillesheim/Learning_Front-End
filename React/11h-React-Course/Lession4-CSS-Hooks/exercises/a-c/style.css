@@ -1,0 +1,31 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.switch-button-on, .switch-button-off {
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  display: block;
+  margin: 1rem 1rem 1rem auto;
+}
+
+.switch-button-on {
+  background: #198754;
+}
+
+.switch-button-off {
+  background: red;
+}
+/*# sourceMappingURL=style.css.map */

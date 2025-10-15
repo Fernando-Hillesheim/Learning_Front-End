@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="js-container"></div>
+
+    
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+    
+    <script type="text/babel">
+
+        function Counter() {
+            const [clicksCounter, setClicksCouter] = React.useState(0);
+            const [autoClickOn, setAutoClickOn] = React.useState(false);
+            const autoClickRef = React.useRef(null)
+            React.useEffect(() => {
+                let intervalId;
+
+                if (autoClickOn) {
+                intervalId = setInterval(() => {
+                    const buttonElem = autoClickRef.current;
+                    if (buttonElem) {
+                    buttonElem.click();
+                    }
+                }, 1000);
+                }
+
+                // limpa o intervalo quando desativar ou desmontar
+                return () => {
+                if (intervalId) clearInterval(intervalId);
+                };
+            }, [autoClickOn]);
+            return(
+                <div className="counter-container">
+                    <button
+                    onClick={() => {
+                        setClicksCouter(clicksCounter+1);
+                    }}
+                    ref={autoClickRef}
+                    >Cliced {clicksCounter}</button>
+
+                    <button
+                    onClick={() => {
+                        setClicksCouter(0);
+                    }}
+                    >Reset</button>
+
+                    <button
+                    onClick={() => {
+                        setAutoClickOn(!autoClickOn);
+                    }}
+                    >{autoClickOn ? 'Stop Auto Click' : 'Start Auto Click'}</button>
+                </div>
+            )
+        }
+
+        function App() {
+            return(
+                <div className="app-container">
+                    <Counter/>
+                </div>
+            )
+        }
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App/>);
+    </script>
+</body>
+</html>
