@@ -1,0 +1,36 @@
+@use "../../sass/abstract/_variables.sass";
+
+.sender-user {
+        display: flex;
+        margin-left: auto;
+        align-items: start;
+        
+        > p {
+            padding: 1rem;
+            background: variables.$chat-message-color;
+            margin-right: 1rem;
+            border-radius: variables.$border-radius-value;
+            max-width: 30rem;
+        }
+        
+        > img {
+            width: 3.5rem;
+        }
+}
+    
+.sender-robot {
+        display: flex;
+        align-items: start;
+        
+        > p {
+            padding: 1rem;
+            background: variables.$chat-message-color;
+            margin-left: 1rem;
+            border-radius: variables.$border-radius-value;
+            max-width: 30rem;
+        }
+        
+        > img {
+            width: 3.5rem;
+        }
+}

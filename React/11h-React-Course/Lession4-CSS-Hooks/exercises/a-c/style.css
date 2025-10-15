@@ -11,7 +11,7 @@ body {
   font-size: 1.6rem;
 }
 
-.switch-button-on, .switch-button-off {
+.switch-button-off, .switch-button-on {
   color: white;
   padding: 1rem;
   border: none;
@@ -22,10 +22,9 @@ body {
 }
 
 .switch-button-on {
-  background: #198754;
+  background: rgb(25, 135, 84);
 }
 
 .switch-button-off {
   background: red;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

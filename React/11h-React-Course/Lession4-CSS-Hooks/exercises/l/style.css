@@ -26,13 +26,11 @@ body {
   overflow: scroll;
   scrollbar-width: none;
 }
-
 .chat-messages-container > .sender-user {
   display: flex;
   margin-left: auto;
   align-items: start;
 }
-
 .chat-messages-container > .sender-user > p {
   padding: 1rem;
   background: rgba(211, 211, 211, 0.616);
@@ -40,16 +38,13 @@ body {
   border-radius: 0.7rem;
   max-width: 30rem;
 }
-
 .chat-messages-container > .sender-user > img {
   width: 3.5rem;
 }
-
 .chat-messages-container > .sender-robot {
   display: flex;
   align-items: start;
 }
-
 .chat-messages-container > .sender-robot > p {
   padding: 1rem;
   background: rgba(211, 211, 211, 0.616);
@@ -57,7 +52,6 @@ body {
   border-radius: 0.7rem;
   max-width: 30rem;
 }
-
 .chat-messages-container > .sender-robot > img {
   width: 3.5rem;
 }
@@ -67,7 +61,6 @@ body {
   gap: 1rem;
   margin-bottom: 2rem;
 }
-
 .chat-input-container-text-input {
   padding: 0.9rem 1.5rem;
   margin-right: 0;
@@ -76,9 +69,8 @@ body {
   border-radius: 0.7rem;
   flex-grow: 1;
 }
-
 .chat-input-container-send-button {
-  background: #198754;
+  background: rgb(25, 135, 84);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.7rem;
@@ -87,8 +79,6 @@ body {
   transition: 0.4s;
   cursor: pointer;
 }
-
 .chat-input-container-send-button:hover {
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.185);
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

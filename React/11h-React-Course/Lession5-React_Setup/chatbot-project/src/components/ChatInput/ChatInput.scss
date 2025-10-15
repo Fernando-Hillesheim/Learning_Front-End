@@ -1,0 +1,31 @@
+@use '../../sass/abstract/variables.sass';
+
+.chat-input-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    &-text-input {
+        padding: 0.9rem 1.5rem;
+        margin-right: 0;
+        border-width: 0.1rem;
+        font-size: 1rem;
+        border-radius: variables.$border-radius-value;
+        flex-grow: 1;
+    }
+
+    &-send-button {
+        background: rgb(25,135,84);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: variables.$border-radius-value;
+        border: none;
+        font-size: 1rem;
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.185);
+        }
+    }
+}
