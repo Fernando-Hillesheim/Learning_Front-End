@@ -4,6 +4,7 @@ import { Header } from "../../components/Header/Header";
 export function HomePage() {
   return (
     <>
+      <link rel="icon" type="image/svg+xml" href="icons8-home-50.png" />
       <Header />
       <div className="home-page">
         <div className="products-grid">
