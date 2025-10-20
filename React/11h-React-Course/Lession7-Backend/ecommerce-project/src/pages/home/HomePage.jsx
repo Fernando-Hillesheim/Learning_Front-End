@@ -1,12 +1,16 @@
 import axios from "axios";
+import { useEffect, useState } from "react";
 import "./HomePage.css";
 import { Header } from "../../components/Header/Header";
-import { products } from "../../../starting-code/data/products";
 
 export function HomePage() {
-  axios.get("http://100.66.210.34:3000/api/products").then((response) => {
-    console.log(response.data);
-  });
+  const [products, setProducts] = useState("");
+  useEffect(() => {
+    axios.get("http://100.66.210.34:3000/api/products").then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
+
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="icons8-home-50.png" />
