@@ -33,6 +33,7 @@ export default [
       ],
       "react/react-in-jsx-scope": "off", // 👈 Desliga a regra que causa o erro
       "react/jsx-uses-react": "off", // 👈 Desliga a regra relacionada (boa prática)
+      "react/prop-types": "off",
     },
   },
 ];
